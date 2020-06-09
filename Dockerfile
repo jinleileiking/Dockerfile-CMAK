@@ -13,7 +13,6 @@ RUN mv -T ./builded/cmak-${CMAK_VERSION} /opt/cmak
 
 FROM openjdk:11.0-jdk-slim
 
-RUN apk update && apk add bash curl
 COPY --from=build /opt/cmak /opt/cmak
 WORKDIR /opt/cmak
 
